@@ -16,4 +16,3 @@ data class TodoData(
     var description: String
 ): Parcelable
 
-
