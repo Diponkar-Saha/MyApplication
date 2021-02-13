@@ -9,11 +9,12 @@ import com.example.myapplication.data.models.TodoData
 
 @Dao
 interface ToDoDao {
+
     @Query("SELECT * FROM todo_table ORDER BY id ASC")
     fun getAllData(): LiveData<List<TodoData>>
 
-    @Insert(onConflict= OnConflictStrategy.IGNORE)
-    suspend fun insertData(todoData: TodoData)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertData(toDoData: TodoData)
 
 
 }
